@@ -4,31 +4,32 @@ import java.util.Arrays;
 
 public class Checking {
     public static void main(String[] args) {
-        int arr[]={45,21,35,1,2,45,123,45,36,5,9};
-        selction(arr);
-        System.out.println(Arrays.toString(arr));
-    }
+        int [] unsorted_arr  = {20,35,26,45,12,7,6,89,1,2};
 
-    static void selction(int arr[]){
+        selection_sorting(unsorted_arr);
+        System.out.println(Arrays.toString(unsorted_arr));
+
+    }
+    static void selection_sorting(int[] arr){
         for (int i=0;i<arr.length;i++){
-            int last=arr.length-i-1;
-            int maxmin = getmaximum(arr,0,last);
-            swappingfunction(arr,maxmin,last);
+            int last = arr.length-i-1;
+            int maximum = getmax(arr,0,last);
+        swapping(arr,maximum,last);
         }
-    }
-    static int getmaximum(int arr[],int start,int end){
-        int maxvalue=start;
-        for (int i=start;i<=end;i++){
-            if(arr[maxvalue]<arr[i]){
-                maxvalue=i;
-            }
-        }
-    return maxvalue;
-    }
 
-    static void swappingfunction(int arr[],int first,int second){
+    }
+    static int getmax(int[] arr,int first,int end){
+        int max= first;
+                for(int i=first;i<=end;i++){
+                    if(arr[max]<arr[i]){
+                        max = i;
+                    }
+                }
+                return max;
+    }
+    static void swapping(int[] arr,int first,int second){
         int temp = arr[first];
-        arr[first]=arr[second];
-        arr[second]=temp;
+        arr[first] = arr[second];
+                arr[second]=temp;
     }
 }
