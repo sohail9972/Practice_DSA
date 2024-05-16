@@ -29,9 +29,9 @@ public class TrialError {
                 return j;
 
             }
-
-            return nums.length;
         }
+        return nums.length;
+    }
 
 
         static void swappingOps ( int[] nums, int first, int second){
@@ -40,4 +40,4 @@ public class TrialError {
             nums[second] = temp;
         }
     }
-}
+
