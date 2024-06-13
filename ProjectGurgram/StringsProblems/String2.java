@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class String2 {
     public static void main(String[] args) {
+        reversingopes();
 //        String str="sohail";
 //        reverseentireString(str);
         String str="sohail";
@@ -32,5 +33,16 @@ public class String2 {
             rev=rev+ string[i];
             System.out.println(rev);
         }
+    }
+
+    static void reversingopes(){
+        String s = "olle";
+        char[] c = s.toCharArray();
+        String rev = "";
+        for (int i = s.length()-1;i>=0;i--){
+            rev = rev + c[i];
+
+        }
+        System.out.println(rev);
     }
 }
