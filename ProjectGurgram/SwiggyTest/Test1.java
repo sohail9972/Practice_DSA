@@ -1,8 +1,6 @@
 package ProjectGurgram.SwiggyTest;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class Test1 {
     public static void main(String[] args) {
@@ -13,16 +11,18 @@ public class Test1 {
 
     }
 
-    public static Map<Integer, Integer> unsortedWithoutDuplicate(int [] arr){
+    public static LinkedHashMap<Integer, Integer> unsortedWithoutDuplicate(int [] arr){
+
 
         LinkedHashMap<Integer,Integer> lmap = new LinkedHashMap<>();
         for (int i=0;i<arr.length;i++){
-            if (arr[i]!=arr[i+1]){
-                lmap.put(i,arr[i]);
+            if (!lmap.containsKey(arr[i])){
+                System.out.println(arr[i]);
+                lmap.put(arr[i],1);
             }
-        }
-        return lmap;
 
+        }
+return lmap;
 //        Map<Integer,Integer> map = new HashMap<>();
 //        for (int i=0;i<arr.length;i++){
 //            if(arr[i]!=arr[i+1]){
