@@ -5,17 +5,21 @@ import java.util.Map;
 
 public class FrequesncyOfLetters {
     public static void main(String[] args) {
-
+        System.out.println(frequencyOfLetters("Sohail"));
     }
 
     public static String frequencyOfLetters(String s){
-        Map<Character, String> map = new HashMap<>();
-        char[] ch = s.toCharArray();
-        for (char c : ch){
-            if (Character.isLetter(c)){
-//                map.put(c,map.getOrDefault(c)+1);
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (int i=0;i<s.length();i++){
+            Character ch = s.charAt(i);
+
+            if (map.containsKey(ch)){
+                map.put(ch, map.get(ch)+1);
+            }else {
+                map.put(ch,1);
             }
         }
-        return null;
+        return map.toString();
     }
 }
