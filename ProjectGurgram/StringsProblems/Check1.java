@@ -1,14 +1,19 @@
 package ProjectGurgram.StringsProblems;
 
 import javax.xml.parsers.SAXParser;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
 
 public class Check1 {
     public static void main(String[] args) {
 //        String str = "abccba";
 //        System.out.println(str(str));
+//
+//        String[] strs = {"flower","flow","flight"};
+//        System.out.println(longprefixstr(strs));
 
-        String[] strs = {"flower","flow","flight"};
-        System.out.println(longprefixstr(strs));
+        System.out.println(validParthenese("[]{}()"));
     }
 
     static String longprefixstr(String[] s){
@@ -41,5 +46,25 @@ public class Check1 {
         }
         return true;
 
+    }
+
+    public static boolean validParthenese(String s){
+        Stack<Character> st = new Stack<>();
+        Map<Character,Character> map = new HashMap<>();
+
+        map.put(')','(');
+        map.put('}','{');
+        map.put(']','[');
+
+        for (char c : s.toCharArray()){
+            if (map.containsValue(c)){
+                st.push(c);
+            } else if (map.containsKey(c)) {
+                if (st.isEmpty() || map.get(c) != st.pop()){
+                    return false;
+                }
+            }
+        }
+        return st.isEmpty();
     }
 }
