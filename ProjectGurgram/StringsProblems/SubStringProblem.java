@@ -6,8 +6,9 @@ public class SubStringProblem {
     public static void main(String[] args) {
         String str = "Hello";
 //        System.out.println(SubString(str));
-//        SubString(str);
-        subStringByTwoPointer(str);
+        SubString(str);
+
+//        subStringByTwoPointer(str);
     }
 
     public static void SubString(String str) {
