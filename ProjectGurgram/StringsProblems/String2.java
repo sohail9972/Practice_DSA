@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class String2 {
     public static void main(String[] args) {
-        reverseStringBuffer(123456789);
+        reverseStringBuffer("123456789");
     }
 //        reversingopes();
 //        String str="sohail";
@@ -48,7 +48,7 @@ public class String2 {
         System.out.println(rev);
     }
 
-    static void reverseStringBuffer(int num){
+    static void reverseStringBuffer(String num){
         System.out.println(new StringBuffer(String.valueOf(num)).reverse());
     }
 }

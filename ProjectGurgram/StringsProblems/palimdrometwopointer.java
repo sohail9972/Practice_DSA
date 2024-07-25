@@ -15,11 +15,9 @@ public class palimdrometwopointer {
         for (int i=0;i<str.length();i++){
             char start= str.charAt(i);
             char last = str.charAt(str.length()-1-i);
-
             if(start != last){
                 return false;
             }
-
         }
         return true;
     }
