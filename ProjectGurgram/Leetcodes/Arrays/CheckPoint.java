@@ -37,16 +37,15 @@ public class CheckPoint {
         return null;
     }
 
-    static int[] TwosumProblemMap(int[] arr, int tar){
-        Map<Integer,Integer> map = new HashMap<>();
-
-        for (int i=0;i<arr.length;i++){
-            int compliment = tar-arr[i];
-            if (map.containsKey(compliment)){
-                return new int[]{map.get(compliment),i};
-            }
-            map.put(arr[i],i);
+    static int[] TwosumProblemMap(int[] arr, int tar) {
+    Map<Integer,Integer> map = new HashMap<>();
+    for (int i=0;i<arr.length;i++){
+        int complimentResult=  tar-arr[i];
+        if (map.containsKey(complimentResult)){
+            return new int[]{map.get(complimentResult),i};
         }
-        throw new IllegalArgumentException("No two indexes");
+        map.put(arr[i],i);
+    }
+    throw new IllegalArgumentException("No two indexes");
     }
 }
