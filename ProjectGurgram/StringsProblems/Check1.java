@@ -1,9 +1,6 @@
 package ProjectGurgram.StringsProblems;
 
-import javax.xml.parsers.SAXParser;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 public class Check1 {
     public static void main(String[] args) {
@@ -13,7 +10,10 @@ public class Check1 {
 //        String[] strs = {"flower","flow","flight"};
 //        System.out.println(longprefixstr(strs));
 
-        System.out.println(validParthenese("[]{}()"));
+//        System.out.println(validParthenese("[]{}()"));
+
+        String [] strs = {"eat","tea","tan","ate","nat","bat"};
+        System.out.println(groupAnagrams(strs));
     }
 
     static String longprefixstr(String[] s){
@@ -66,5 +66,20 @@ public class Check1 {
             }
         }
         return st.isEmpty();
+    }
+
+    public static List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> map = new HashMap<>();
+        for (String eachwordsoflistofString : strs){
+            char[] ch = eachwordsoflistofString.toCharArray();
+            Arrays.sort(ch);
+//            creating new String using sorted word
+            String eachWordthatissorted = new String(ch);
+            if (!map.containsKey(eachWordthatissorted)){
+                map.put(eachWordthatissorted,new ArrayList<>());
+            }
+            map.get(eachWordthatissorted).add(eachwordsoflistofString);
+        }
+        return new ArrayList<>(map.values());
     }
 }
