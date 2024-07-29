@@ -12,8 +12,11 @@ public class Check1 {
 
 //        System.out.println(validParthenese("[]{}()"));
 
-        String [] strs = {"eat","tea","tan","ate","nat","bat"};
-        System.out.println(groupAnagrams(strs));
+//        String [] strs = {"eat","tea","tan","ate","nat","bat"};
+//        System.out.println(groupAnagrams(strs));
+
+//        System.out.println(returnuniqueLetters("pipes"));
+        System.out.println(returnFirstoccurenceofWord("sadbutsad","but"));
     }
 
     static String longprefixstr(String[] s){
@@ -81,5 +84,34 @@ public class Check1 {
             map.get(eachWordthatissorted).add(eachwordsoflistofString);
         }
         return new ArrayList<>(map.values());
+    }
+
+    public static char returnuniqueLetters(String s){
+        int index=-1;
+        Map<Character,Integer> map = new HashMap<>();
+        for (int i=0;i<s.length();i++){
+            char ch = s.charAt(i);
+            int maxfreq = map.getOrDefault(ch,0);
+            map.put(ch,(maxfreq+1));
+        }
+        for (int i=0;i<s.length();i++){
+            if (map.get(s.charAt(i))==1){
+                index=i;
+                break;
+            }
+
+        }
+        return s.charAt(index);
+    }
+
+    public static int returnFirstoccurenceofWord(String hayStack,String needle){
+        for (int i=0;i<(hayStack.length()-needle.length()+1);i++){
+            if(hayStack.charAt(i)==needle.charAt(0)){
+                if(hayStack.substring(i,needle.length()+i).equals(needle)){
+                    return i;
+                }
+            }
+        }
+        return -1;
     }
 }
