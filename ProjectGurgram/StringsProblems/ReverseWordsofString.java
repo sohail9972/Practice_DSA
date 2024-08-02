@@ -13,7 +13,7 @@ public class ReverseWordsofString {
             sb.append(str[i]);
             sb.append(" ");
         }
-        return sb.toString().trim();
+        return sb.reverse().toString().trim();
 
     }
 

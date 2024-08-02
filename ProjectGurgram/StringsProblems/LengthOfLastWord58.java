@@ -2,7 +2,7 @@ package ProjectGurgram.StringsProblems;
 
 public class LengthOfLastWord58 {
     public static void main(String[] args) {
-        System.out.println(lengthOfLastWord("   fly me   to   the moon  "));
+        System.out.println(lengthOfLastWord("hello worklfjhghhh"));
     }
 
     public static int lengthOfLastWord(String s) {
