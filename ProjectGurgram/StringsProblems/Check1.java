@@ -16,7 +16,10 @@ public class Check1 {
 //        System.out.println(groupAnagrams(strs));
 
 //        System.out.println(returnuniqueLetters("pipes"));
-        System.out.println(returnFirstoccurenceofWord("sadbutsad","but"));
+//        System.out.println(returnFirstoccurenceofWord("sadbutsad","but"));
+
+        String[] strs = {"abba", "baba", "bbaa", "cd", "cd"};
+        System.out.println(removingAnagrams(strs));
     }
 
     static String longprefixstr(String[] s){
@@ -33,6 +36,8 @@ public class Check1 {
 
         return firstWordofArray;
     }
+
+    //    check given string is Palimdrome or not
 
     static boolean str(String s) {
         if (s == null || s.length() == 0) {
@@ -92,14 +97,13 @@ public class Check1 {
         for (int i=0;i<s.length();i++){
             char ch = s.charAt(i);
             int maxfreq = map.getOrDefault(ch,0);
-            map.put(ch,(maxfreq+1));
+            map.put(ch,maxfreq+1);
         }
         for (int i=0;i<s.length();i++){
             if (map.get(s.charAt(i))==1){
-                index=i;
+                index = i;
                 break;
             }
-
         }
         return s.charAt(index);
     }
@@ -114,4 +118,21 @@ public class Check1 {
         }
         return -1;
     }
+//    String[] strs = {"abba", "baba", "bbaa", "cd", "cd"};
+//to remove the anagrams
+    public static List<String> removingAnagrams(String[] stringsofWords){
+        String prev = "";
+        List<String> list = new ArrayList<>();
+        for (String eachword:stringsofWords){
+            char[] ch = eachword.toCharArray();
+            Arrays.sort(ch);
+            String current_word = String.valueOf(ch);
+            if (!current_word.equals(prev)){
+                list.add(current_word);
+                prev=current_word;
+            }
+        }
+        return list;
+    }
+
 }

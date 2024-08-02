@@ -3,12 +3,13 @@ package ProjectGurgram.StringsProblems;
 public class String1 {
     public static void main(String[] args) {
         String str = "hello";
-       reverseString(str);
+        System.out.println(reverseString("hello"));
+
 //        System.out.println(ams);
 
     }
 
-    static String reverseString(String s){
+    public static String reverseString(String s){
 
         char[] n=s.toCharArray();
         int start =0; int last=n.length-1;
