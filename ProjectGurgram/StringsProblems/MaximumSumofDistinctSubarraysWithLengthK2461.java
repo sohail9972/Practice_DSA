@@ -1,28 +1,27 @@
 package ProjectGurgram.StringsProblems;
 
+import java.util.ArrayList;
+
 public class MaximumSumofDistinctSubarraysWithLengthK2461 {
     public static void main(String[] args) {
-        int[] arr = {1,5,4,2,9,9,9};
+        ArrayList<Integer> arr = new ArrayList<>();
         int fixedwindowsize=3;
         System.out.println(maximumSubarraySum(arr,fixedwindowsize));
     }
-    public static long maximumSubarraySum(int[] nums, int k) {
+    public static long maximumSubarraySum(ArrayList<Integer> nums, int k) {
         int  start=0;
         int end =0;
         long sum=0;
-        long max=0;
-        while(end< nums.length){
-            if(nums[start]==nums[end]){
-                return 0;
-            }
-            sum = sum +nums[end];
+        long max= Long.MAX_VALUE;
+        while(end< nums.size()){
+                sum = sum +nums.get(end);
             if(end-start+1 < k){
                 end++;
             } else if (end-start+1==k) {
-                max=Math.max(max,sum);
-                sum=sum-nums[start];
-                start++;
-                end++;
+                    max = Math.max(max, sum);
+                    sum = sum - nums.get(start);
+                    start++;
+                    end++;
             }
         }
 return max;
