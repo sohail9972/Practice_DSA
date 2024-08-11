@@ -8,6 +8,7 @@ public class CountGoodStrings {
         System.out.println(countGoodSubstrings("xyzzaz"));
     }
 
-    public static int countGoodSubstrings(String s) {
+    public static Object countGoodSubstrings(String s) {
+        return null;
     }
 }
