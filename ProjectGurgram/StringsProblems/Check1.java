@@ -21,7 +21,8 @@ public class Check1 {
 //        String[] strs = {"abba", "baba", "bbaa", "cd", "cd"};
 //        System.out.println(removingAnagrams(strs));
 
-        System.out.println(firstAndLastLetter("look","kool"));
+//        System.out.println(firstAndLastLetter("look","kool"));
+        checkonePlusOne();
     }
 
     static String longprefixstr(String[] s){
@@ -160,5 +161,7 @@ public class Check1 {
         }
         return false;
     }
-
+    public static void checkonePlusOne(){
+        System.out.println("1"+"1");
+    }
 }
