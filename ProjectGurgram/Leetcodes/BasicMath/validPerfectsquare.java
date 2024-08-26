@@ -2,7 +2,7 @@ package ProjectGurgram.Leetcodes.BasicMath;
 
 public class validPerfectsquare {
     public static void main(String[] args) {
-        System.out.println(isPerfectSquare(56));
+        System.out.println(isPerfectSquare(16));
     }
     public static boolean isPerfectSquare(int num) {
         int l = 0, h = num, mid = 0;
