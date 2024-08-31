@@ -1,0 +1,43 @@
+Problem Number #88. Merge Sorted Array
+
+Algorithm of Approach:
+The Problem is focused on the Merging Two Already Sorted Arrays , Return the Sorted Array
+
+# Time Complexity: O(n+m)
+# Space Complexity : O(N)
+
+
+Lets dive into the Problem :
+Example :
+arr =[1,2,3,0,0,0]
+arr1 = [2,5,6]
+
+Exm 2 :
+arr = [11,12,16,18,0,0,0]
+arr1= [2,5,6]
+
+We will try to add the elements from the Back in the First Array
+As We are Supposed to return the Sorted array finally
+so , Will Add First Maximum element of the Second Array
+will Proceed till We Hit end of Length for Second Array
+
+Lets Consider the a pointer as RightPointer pointing to the Last index of First Array
+Lets consider one pointer similarly for each array pointing till Non Zero Element mIndex and nIndex
+
+We Will Loop through the second Array till we hit Non-Negative Integer
+Compare mIndex >= 0 and Last Element of the First Array is Greater than the last Element of the Second Array
+will Keep the arr[rightPointer]=arr[mIndex]
+Then we Decrement the mIndex
+
+if (mindex>=0 && nums1[mindex]>nums2[nindex]){
+                nums1[rightPointer]=nums1[mindex];
+                mindex--;
+
+Else, We will add arr1[nIndex] to that RightPointer
+ nums1[rightPointer]=nums2[nindex];
+                nindex--;
+
+Then Decrement the Rightpointer
+Then We Achieve Merged Sorted array
+
+
