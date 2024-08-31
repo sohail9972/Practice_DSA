@@ -1,4 +1,4 @@
-package ProjectGurgram.Leetcodes;
+package ProjectGurgram.Leetcodes.Arrays;
 
 public class FindDuplicatesusingkunal {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ProjectGurgram.Leetcodes;
+package ProjectGurgram.Leetcodes.Arrays;
 
 class FindtheDuplicates {
     public static void main(String[] args) {

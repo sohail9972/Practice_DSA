@@ -2,7 +2,7 @@ package ProjectGurgram.StringsProblems;
 
 public class firstandLastcharacterReverse {
     public static void main(String[] args) {
-        System.out.println(reversefirstandLast("    "));
+        System.out.println(reversefirstandLast("sohail"));
     }
     public static String reversefirstandLast(String str){
         char [] ch = str.toCharArray();
