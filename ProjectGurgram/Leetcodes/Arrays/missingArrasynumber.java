@@ -1,4 +1,4 @@
-package ProjectGurgram.Leetcodes;
+package ProjectGurgram.Leetcodes.Arrays;
 
 import java.util.ArrayList;
 import java.util.List;

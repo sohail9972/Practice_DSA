@@ -15,7 +15,7 @@ public class SlindingwindowMaximum239 {
         int[] storingMaximumofSubArray = new int[n - k + 1];
         int start = 0;
 
-//            Deque will be storing the Indexs
+//      Deque will be storing the Indexes
         Deque<Integer> dqueue = new ArrayDeque<>();
             for(int i = 0; i<n;i++) {
                 {

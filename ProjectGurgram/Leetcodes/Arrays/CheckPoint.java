@@ -5,13 +5,16 @@ import java.util.Map;
 
 public class CheckPoint {
     public static void main(String[] args) {
-        int[] arr = {1,1,2};
-//        System.out.println(removeDuplicatesfromArray(arr));
+//        int[] arr = {1,1,2};
+////        System.out.println(removeDuplicatesfromArray(arr));
+//
+//        int[] arr1 ={2,8,7,11,15};
+//        int target=9;
+////        System.out.println(twoSumProblme(arr1,target));
+//        System.out.println(TwosumProblemMap(arr1,target));
+        int [] arr = {3,3,3,3,3};
+        findMissingNumberInArraycheck(arr);
 
-        int[] arr1 ={2,8,7,11,15};
-        int target=9;
-//        System.out.println(twoSumProblme(arr1,target));
-        System.out.println(TwosumProblemMap(arr1,target));
     }
 
     static int removeDuplicatesfromArray(int[] arr){
@@ -48,4 +51,18 @@ public class CheckPoint {
     }
     throw new IllegalArgumentException("No two indexes");
     }
+
+    public static void findMissingNumberInArraycheck(int[] arr){
+        int index = 0 ;
+        for (int i=0;i<=arr.length;i++){
+            index=index ^ i;
+        }
+        for (int num:arr) {
+            if (arr[index] != index + 1) {
+                index = index ^ num;
+            }
+        }
+        System.out.println(arr[index]);
+    }
+
 }

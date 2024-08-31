@@ -2,7 +2,7 @@ package ProjectGurgram.StringsProblems;
 
 public class FirstOccurenceofStringinSentence {
     public static void main(String[] args) {
-        System.out.println(strStr("sadbutsad","s"));
+        System.out.println(strStr("sadbutsad","d"));
     }
     public static int strStr(String haystack, String needle) {
         for (int i=0;i<(haystack.length()-needle.length()+1);i++){
