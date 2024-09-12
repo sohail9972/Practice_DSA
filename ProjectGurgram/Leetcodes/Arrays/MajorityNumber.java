@@ -2,7 +2,7 @@ package ProjectGurgram.Leetcodes.Arrays;
 
 public class MajorityNumber {
     public static void main(String[] args) {
-        int[] arr ={2,2,1,1,1,2,2};
+        int[] arr ={15,4,10,2,5,8,4};
         System.out.println(majorityElement(arr));
     }
 
