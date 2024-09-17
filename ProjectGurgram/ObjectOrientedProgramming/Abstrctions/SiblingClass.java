@@ -12,4 +12,9 @@ public class SiblingClass extends AbstractingLerning{
     void partener() {
         System.out.println("Daughter age");
     }
+
+    @Override
+    void age() {
+        System.out.println("age of sibling");
+    }
 }

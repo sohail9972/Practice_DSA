@@ -9,5 +9,6 @@ public class MainFileclassAbstraction {
         SiblingClass sb = new SiblingClass();
         sb.career();
         sb.partener();
+        sb.age();
     }
 }
