@@ -4,25 +4,19 @@ public class PowerOfNumberUsingBitExponention {
     public static void main(String[] args) {
         System.out.println(myPow(7,11));
     }
-    public static double myPow(double x, int n) {
-        if(n < 0){
-            n = -n;
-            x = 1 / x;
+    public static double myPow(double a, int b) {
+        if(b < 0){
+            b = -b;
+            a = 1 / a;
         }
-
         double pow = 1;
-
-        while(n != 0){
-            if((n & 1) != 0){
-                pow *= x;
+        while(b != 0){
+            if((b & 1) != 0){
+                pow *= a;
             }
-
-            x *= x;
-            n >>>= 1;
-
+            a *= a;
+            b >>>= 1;
         }
-
         return pow;
-
     }
 }
